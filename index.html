@@ -11,7 +11,9 @@
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/jquery/jquery.countdown.js"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
@@ -70,8 +72,15 @@
       <h1 class="mb-4 pb-0">Connected Everything <br><span>Summer</span> School</h1>
       <p class="mb-4 pb-0">12-14 July, Online</p>
       <p class="mb-4 pb-0"> Organizers: The University of Leeds & The University of Huddersfield</p>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
+      <div id="getting-started" style="color:white"></div>
+      <script type="text/javascript">
+        $("#getting-started")
+        .countdown("2021/07/12", function(event) {
+          $(this).text(
+            event.strftime('%D days %H:%M:%S to Event')
+          );
+        });
+      </script>
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section>
@@ -783,8 +792,8 @@
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  
+ 
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
@@ -794,9 +803,7 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
+    <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 </body>
 
